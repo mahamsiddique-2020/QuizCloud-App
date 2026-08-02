@@ -20,7 +20,7 @@
 
 <br/>
 
-[🚀 Live Demo](https://quizcloud-app.vercel.app) &nbsp;•&nbsp; [📸 Screenshots](#-screenshots) &nbsp;•&nbsp; [⚙️ Installation](#️-installation) &nbsp;•&nbsp; [📖 Features](#-features)
+[🚀 Live Demo](https://quiz-cloud-app-zdqf.vercel.app/) &nbsp;•&nbsp; [📸 Screenshots](#-screenshots) &nbsp;•&nbsp; [⚙️ Installation](#️-installation) &nbsp;•&nbsp; [📖 Features](#-features)
 
 <br/>
 
