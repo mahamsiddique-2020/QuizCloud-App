@@ -1,0 +1,238 @@
+/* ── Page wrapper ─────────────────────────────────────────────── */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  padding: 24px 16px;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+/* ── Card ─────────────────────────────────────────────────────── */
+.auth-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  border: 0.5px solid #333333;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.6);
+}
+
+/* ── Header ───────────────────────────────────────────────────── */
+.auth-header {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.auth-role-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.teacher-badge {
+  background: #333333;
+  color: #007BFF;
+}
+
+.student-badge {
+  background: #333333;
+  color: #28a745;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+/* ── Form ─────────────────────────────────────────────────────── */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  background: #1a1a1a;
+}
+
+.form-input::placeholder {
+  color: #cccccc;
+}
+
+select.form-input {
+  cursor: pointer;
+}
+
+.input-with-toggle {
+  position: relative;
+}
+
+.input-with-toggle .form-input {
+  padding-right: 52px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-password:hover {
+  color: #007BFF;
+}
+
+.form-hint {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  margin-top: 6px;
+  font-family: inherit;
+}
+
+.auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-btn:not(:disabled):hover {
+  opacity: 0.92;
+}
+
+.auth-btn:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+.teacher-btn {
+  background: #007BFF;
+  color: #FFFFFF;
+}
+
+.student-btn {
+  background: #28a745;
+  color: #FFFFFF;
+}
+
+/* ── Footer ───────────────────────────────────────────────────── */
+.auth-footer {
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-footer p {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.auth-link {
+  color: #007BFF;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+.auth-divider {
+  font-size: 12px;
+  color: #cccccc;
+  margin-top: 4px;
+}
+
+.switch-role-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background 0.15s;
+}
+
+.switch-role-link:hover {
+  background: #1a1a1a;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 20px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

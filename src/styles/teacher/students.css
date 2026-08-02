@@ -1,0 +1,328 @@
+/* ── Page Layout ──────────────────────────────────────────────── */
+.students-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  background: #000000;
+}
+
+.students-main {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  background: #000000;
+}
+
+/* ── Top Bar ──────────────────────────────────────────────────── */
+.students-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.students-topbar h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.students-topbar p {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-top: 2px;
+}
+
+/* ── Stats Grid ───────────────────────────────────────────────── */
+.students-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.students-stat-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  border: 0.5px solid #333333;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.students-stat-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.students-stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.students-stat-label {
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+/* ── Toolbar ──────────────────────────────────────────────────── */
+.students-toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.students-search {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  min-width: 200px;
+  transition: border-color 0.15s;
+}
+
+.students-search:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.students-search::placeholder { color: #FFFFFF; }
+
+.students-filter {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  min-width: 140px;
+}
+
+.students-filter option {
+  background: #1a1a1a;
+  color: #FFFFFF;
+}
+
+/* ── Students Grid ────────────────────────────────────────────── */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* ── Student Card ─────────────────────────────────────────────── */
+.student-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  border: 0.5px solid #333333;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.student-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+  border-color: #555555;
+}
+
+.student-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.student-card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.student-card-avatar.low {
+  background: linear-gradient(135deg, #dc3545, #e74c3c);
+}
+
+.student-card-avatar.mid {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+}
+
+.student-card-info {
+  flex: 1;
+}
+
+.student-card-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.student-card-meta {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+/* ── Student Stats ────────────────────────────────────────────── */
+.student-card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.student-card-stat {
+  background: #111111;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  border: 0.5px solid #333333;
+}
+
+.student-card-stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.student-card-stat-label {
+  font-size: 11px;
+  color: #FFFFFF;
+}
+
+/* ── Score Bar ────────────────────────────────────────────────── */
+.student-score-bar-wrap {
+  margin-bottom: 14px;
+}
+
+.student-score-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+.student-score-bar-bg {
+  height: 6px;
+  background: #333333;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.student-score-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+  background: #007BFF;
+}
+
+/* ── Status Badge ─────────────────────────────────────────────── */
+.student-status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: #FFFFFF;
+}
+
+.student-status-badge.good {
+  background: #28a745;
+}
+
+.student-status-badge.average {
+  background: #ffc107;
+  color: #000000;
+}
+
+.student-status-badge.needs-help {
+  background: #dc3545;
+}
+
+/* ── Card Actions ─────────────────────────────────────────────── */
+.student-card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-student-action {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: opacity 0.15s;
+  color: #FFFFFF;
+}
+
+.btn-student-action:hover { opacity: 0.85; }
+
+.btn-view-results {
+  background: #007BFF;
+}
+
+.btn-send-alert {
+  background: #dc3545;
+}
+
+/* ── Empty State ──────────────────────────────────────────────── */
+.students-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #FFFFFF;
+}
+
+.students-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.students-empty h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.students-empty p { 
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+/* ── Loading ──────────────────────────────────────────────────── */
+.students-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/* ── Responsive ────────────────────────────��──────────────────── */
+@media (max-width: 768px) {
+  .students-main { padding: 16px; }
+  .students-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .students-grid { grid-template-columns: 1fr; }
+  .students-toolbar { flex-direction: column; }
+}

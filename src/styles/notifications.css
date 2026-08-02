@@ -1,0 +1,298 @@
+/* ── Page Layout ──────────────────────────────────────────────── */
+.notifications-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  background: #000000;
+}
+
+.notifications-main {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  background: #000000;
+}
+
+/* ── Top Bar ──────────────────────────────────────────────────── */
+.notifications-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.notifications-topbar h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.notifications-topbar p {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-top: 2px;
+}
+
+/* ── Mark All Read Button ─────────────────────────────────────── */
+.btn-mark-all {
+  padding: 10px 18px;
+  background: #1a1a1a;
+  color: #007BFF;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn-mark-all:hover {
+  background: #007BFF;
+  color: #FFFFFF;
+  border-color: #007BFF;
+}
+
+/* ── Notification Card ────────────────────────────────────────── */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  border: 0.5px solid #333333;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: box-shadow 0.15s, border-color 0.15s;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+  border-color: #555555;
+}
+
+.notification-card.unread {
+  border-left: 3px solid #007BFF;
+  background: #0a1828;
+}
+
+.notification-card.unread-student {
+  border-left: 3px solid #28a745;
+  background: #0a1f0a;
+}
+
+/* ── Unread Dot ───────────────────────────────────────────────── */
+.unread-dot {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #007BFF;
+}
+
+.unread-dot.student {
+  background: #28a745;
+}
+
+/* ── Icon ─────────────────────────────────────────────────────── */
+.notification-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.notification-icon.quiz     { background: #007BFF; }
+.notification-icon.result   { background: #28a745; }
+.notification-icon.warning  { background: #ffc107; }
+.notification-icon.info     { background: #17a2b8; }
+.notification-icon.success  { background: #28a745; }
+
+/* ── Content ──────────────────────────────────────────────────── */
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.notification-message {
+  font-size: 13px;
+  color: #FFFFFF;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+/* ── Send Notification Form (Teacher) ─────────────────────────── */
+.send-notification-card {
+  background: #1a1a1a;
+  border-radius: 14px;
+  border: 0.5px solid #333333;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.send-notification-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 0.5px solid #333333;
+}
+
+.notification-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-input {
+  width: 100%;
+  padding: 10px 13px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #111111;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.notification-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  background: #1a1a1a;
+}
+
+.notification-input::placeholder { color: #FFFFFF; }
+
+textarea.notification-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.notification-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-send-notification {
+  padding: 11px 20px;
+  background: #007BFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+  align-self: flex-start;
+}
+
+.btn-send-notification:hover { 
+  opacity: 0.88;
+  background: #0056b3;
+}
+
+.btn-send-notification:disabled { 
+  opacity: 0.6; 
+  cursor: not-allowed; 
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────── */
+.notifications-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.notifications-tab {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #333333;
+  background: #111111;
+  font-size: 13px;
+  font-weight: 500;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.notifications-tab:hover {
+  border-color: #555555;
+}
+
+.notifications-tab.active {
+  background: #007BFF;
+  border-color: #007BFF;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.notifications-tab.active.student {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+/* ── Empty State ──────────────────────────────────────────────── */
+.notifications-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #FFFFFF;
+}
+
+.notifications-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.notifications-empty h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.notifications-empty p {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .notifications-main { padding: 16px; }
+  .notification-form-row { grid-template-columns: 1fr; }
+}

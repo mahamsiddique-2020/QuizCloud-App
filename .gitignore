@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Environment variables — NEVER push this!
+.env
+.env.local
+.env.development
+.env.production
+
+# Build folder
+build/
+
+# Misc
+.DS_Store
