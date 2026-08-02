@@ -81,12 +81,10 @@
 ![Landing Page](screenshots/landing.png)
 
 ### 🎓 Teacher Dashboard
-![Teacher Dashboard](<img width="835" height="431" alt="teacher-dashboard" src="https://github.com/user-attachments/assets/2a789005-fc6d-4ebd-9c43-537760f91802" />
-)
+![Teacher Dashboard](screenshots/teacher-dashboard.png)
 
 ### 📝 Quiz Builder
-![Quiz Builder](<img width="1534" height="704" alt="quiz-builder" src="https://github.com/user-attachments/assets/05a9abbc-02b0-4e50-8438-05ee7bdb14de" />
-)
+![Quiz Builder](screenshots/quiz-builder.png)
 
 ### 📚 Student Dashboard
 ![Student Dashboard](screenshots/student-dashboard.png)
